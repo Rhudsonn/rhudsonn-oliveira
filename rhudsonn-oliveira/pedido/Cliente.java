@@ -1,31 +1,21 @@
 package pedido;
 
+
 public class Cliente {
 
-    private String nomeCliente;
-    private String emailCliente;
+    private String nome;
+    private String email;
 
-    public Cliente(){
-
-    }
-    public Cliente(String nomeCliente, String emailCliente) {
-        this.nomeCliente = nomeCliente;
-        this.emailCliente = emailCliente;
+    public Cliente(String nome, String email) {
+        this.nome = nome;
+        this.email = email;
     }
 
-    public String getNomeCliente() {
-        return nomeCliente;
+    public String getNome() {
+        return nome;
     }
 
-    public void setNomeCliente(String nomeCliente) {
-        this.nomeCliente = nomeCliente;
-    }
-
-    public String getEmailCliente() {
-        return emailCliente;
-    }
-
-    public void setEmailCliente(String emailCliente) {
-        this.emailCliente = emailCliente;
+    public String getEmail() {
+        return email;
     }
 }

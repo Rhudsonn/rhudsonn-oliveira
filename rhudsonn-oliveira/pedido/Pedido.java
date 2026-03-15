@@ -34,12 +34,30 @@ package pedido;
  */
 public class Pedido {
 
-    Cliente cliente = new Cliente();
-    Produto produto = new Produto();
+    private Cliente cliente;
+    private Produto produto;
+    private int quantidade;
 
-    Cliente c1 = new Cliente("Nome","rhudsonn@");
-    Produto p1 = new Produto("Blusa",2.0,2);
-    
+    public Pedido(Cliente cliente, Produto produto, int quantidade) {
+        this.cliente = cliente;
+        this.produto = produto;
+        this.quantidade = quantidade;
+    }
+
+    public double calcularTotal() {
+        return produto.getPreco() * quantidade;
+    }
+
+    public void imprimirResumo() {
+        System.out.println("\n-----------------------------------");
+        System.out.println("Cliente: " + cliente.getNome());
+        System.out.println("Email: " + cliente.getEmail());
+        System.out.println("Produto: " + produto.getNome());
+        System.out.println("Preço unitário: " + produto.getPreco());
+        System.out.println("Quantidade: " + quantidade);
+        System.out.println("Total: " + calcularTotal());
+    }
+}
 
 
     //_________________________________________________________________________________
@@ -64,4 +82,3 @@ public class Pedido {
       //  System.out.println("Quantidade: " + quantidade);
       //  System.out.println("Total: " + calcularTotal());
    // }
-}
